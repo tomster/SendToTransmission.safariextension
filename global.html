@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<script>
+safari.application.addEventListener("command", handleCommand, false);
+safari.application.addEventListener("validate", validateCommand, false);
+
+function handleCommand(event)
+{
+    // Always check the command name.
+    if (event.command !== "SendToTransmission")
+        return;
+        
+    // We expect the user info for this event to contain the timestamp property.
+    if (!event.userInfo || !event.userInfo.timestamp)
+        return;
+    
+    // Send a message to the content script to hide the image.
+    alert('Processing ' + event.userInfo.target_url)
+}
+
+function validateCommand(event)
+{
+    
+    if (event.command !== "SendToTransmission")
+        return;
+     
+    // We expect the user info for this event to contain the timestamp property.
+    if (!event.userInfo || !event.userInfo.timestamp)
+        return;
+    // Disable the menu entry, if we're not on a hyperlink
+    if (event.userInfo && event.userInfo.tagName !== "A")
+      event.target.disabled = true;
+
+
+}
+
+</script>

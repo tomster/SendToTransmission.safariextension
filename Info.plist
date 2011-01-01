@@ -22,16 +22,23 @@
 				<key>Command</key>
 				<string></string>
 				<key>Identifier</key>
-				<string>SendToTransmissionItem</string>
+				<string>SendToTransmission</string>
 				<key>Title</key>
 				<string>Send to Transmission</string>
 			</dict>
 		</array>
+		<key>Global Page</key>
+		<string>global.html</string>
 	</dict>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>content.js</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Description</key>
 	<string>Adds torrent to a (remote) Transmission client</string>
