@@ -9,12 +9,13 @@ function handleCommand(event)
     if (event.command !== "SendToTransmission")
         return;
         
-    // We expect the user info for this event to contain the timestamp property.
-    if (!event.userInfo || !event.userInfo.timestamp)
+    // We expect the user info for this event to contain the target_url property.
+    if (!event.userInfo || !event.userInfo.target_url)
         return;
     
     // Send a message to the content script to hide the image.
-    alert('Processing ' + event.userInfo.target_url)
+    var transmission_url = safari.extension.settings.transmission_url
+    alert('Sending ' + event.userInfo.target_url + ' to ' + transmission_url)
 }
 
 function validateCommand(event)

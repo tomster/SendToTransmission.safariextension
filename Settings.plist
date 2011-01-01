@@ -6,7 +6,7 @@
 		<key>DefaultValue</key>
 		<string>http://localhost:9091</string>
 		<key>Key</key>
-		<string>transmission-url</string>
+		<string>transmission_url</string>
 		<key>Title</key>
 		<string>Transmission URL</string>
 		<key>Type</key>
