@@ -8,15 +8,28 @@ function handleCommand(event)
     // Always check the command name.
     if (event.command !== "SendToTransmission")
         return;
-        
     // We expect the user info for this event to contain the target_url property.
     if (!event.userInfo || !event.userInfo.target_url)
         return;
     
-    // Send a message to the content script to hide the image.
     var transmission_url = safari.extension.settings.transmission_url
-    alert('Sending ' + event.userInfo.target_url + ' to ' + transmission_url)
-}
+    var target_url = event.userInfo.target_url
+    alert('Sending ' + target_url + ' to ' + transmission_url)
+
+    var params = "torrent_upload_url=" + target_url + "&torrent_auto_start=true";
+    var http = new XMLHttpRequest();
+    http.open("POST", transmission_url, true);
+    //Send the proper header information along with the request
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.setRequestHeader("Content-length", params.length);
+    http.setRequestHeader("Connection", "close");
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+      if(http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
+      }
+    }
+    http.send(params);}
 
 function validateCommand(event)
 {
@@ -24,12 +37,10 @@ function validateCommand(event)
     if (event.command !== "SendToTransmission")
         return;
      
-    // We expect the user info for this event to contain the timestamp property.
-    if (!event.userInfo || !event.userInfo.timestamp)
+    // We expect the user info for this event to contain the target_url property.
+    if (!event.userInfo || !event.userInfo.target_url)
+        event.target.disabled = true;
         return;
-    // Disable the menu entry, if we're not on a hyperlink
-    if (event.userInfo && event.userInfo.tagName !== "A")
-      event.target.disabled = true;
 
 
 }
