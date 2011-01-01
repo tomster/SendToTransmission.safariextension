@@ -24,7 +24,7 @@
 				<key>Identifier</key>
 				<string>SendToTransmission</string>
 				<key>Title</key>
-				<string>Send to Transmission</string>
+				<string>Send Link to Transmission</string>
 			</dict>
 		</array>
 		<key>Global Page</key>
