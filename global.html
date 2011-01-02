@@ -16,7 +16,7 @@ function handleCommand(event)
     if (!event.userInfo || !event.userInfo.target_url)
         return;
     
-    transmission_url = safari.extension.settings.transmission_url + "/transmission/rpc/"
+    transmission_url = safari.extension.settings.transmission_url
     torrent_url = event.userInfo.target_url
     remote = new TransmissionRemote(transmission_url)
     remote.addTorrentByUrl(torrent_url, {paused: false})
