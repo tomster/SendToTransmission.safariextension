@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
+<script type="text/javascript" src="jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="json.min.js"></script>
+<script type="text/javascript" src="transmission.remote.js"></script>
 <script>
+jQuery.noConflict()
 safari.application.addEventListener("command", handleCommand, false);
 safari.application.addEventListener("validate", validateCommand, false);
 
@@ -12,24 +16,11 @@ function handleCommand(event)
     if (!event.userInfo || !event.userInfo.target_url)
         return;
     
-    var transmission_url = safari.extension.settings.transmission_url
-    var target_url = event.userInfo.target_url
-    alert('Sending ' + target_url + ' to ' + transmission_url)
-
-    var params = "torrent_upload_url=" + target_url + "&torrent_auto_start=true";
-    var http = new XMLHttpRequest();
-    http.open("POST", transmission_url, true);
-    //Send the proper header information along with the request
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    http.setRequestHeader("Content-length", params.length);
-    http.setRequestHeader("Connection", "close");
-
-    http.onreadystatechange = function() {//Call a function when the state changes.
-      if(http.readyState == 4 && http.status == 200) {
-        alert(http.responseText);
-      }
-    }
-    http.send(params);}
+    transmission_url = safari.extension.settings.transmission_url + "/transmission/rpc/"
+    torrent_url = event.userInfo.target_url
+    remote = new TransmissionRemote(transmission_url)
+    remote.addTorrentByUrl(torrent_url, {paused: false})
+}
 
 function validateCommand(event)
 {
@@ -41,7 +32,6 @@ function validateCommand(event)
     if (!event.userInfo || !event.userInfo.target_url)
         event.target.disabled = true;
         return;
-
 
 }
 
