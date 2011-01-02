@@ -6,7 +6,8 @@ var lastContextMenuEventTime;
 // Register for the contextmenu event.
 document.addEventListener("contextmenu", handleContextMenu, false);
 
-
+// use custom traverser to avoid including jQuery here, since this method
+// is called on *every* page load
 function findParentNode(parentTagName, childObj) {
     var testObj = childObj;
     while(testObj.tagName != parentTagName) {
