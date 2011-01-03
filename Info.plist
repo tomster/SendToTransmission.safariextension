@@ -9,11 +9,11 @@
 	<key>CFBundleIdentifier</key>
 	<string>org.tomster.safariextension.sendtotransmission</string>
 	<key>CFBundleInfoDictionaryVersion</key>
-	<string>6.0</string>
+	<string>7.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1alpha2</string>
+	<string>0.1alpha3</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
