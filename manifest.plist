@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Extension Updates</key>
+   <array>
+     <dict>
+       <key>CFBundleIdentifier</key>
+       <string>org.tomster.safariextension.sendtotransmission</string>
+       <key>Developer Identifier</key>
+       <string>44DXBMU56M</string>
+       <key>CFBundleVersion</key>
+       <string>2</string>
+       <key>CFBundleShortVersionString</key>
+       <string>0.1alpha2</string>
+       <key>URL</key>
+       <string>https://github.com/downloads/tomster/SendToTransmission.safariextension/SendToTransmission.safariextz</string>
+     </dict>
+   </array>
+</dict>
+</plist>
