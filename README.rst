@@ -20,7 +20,7 @@ Authentication (you *did* activate authentication for your remotely reachable Tr
 Installation
 ============
 
-The easiest way is to `download the latest pre-built package from github <https://github.com/tomster/SendToTransmission.safariextension/archives/master>`_. Download it, double-click it, presto!
+The easiest way is to `download the latest pre-built package from github <https://github.com/downloads/tomster/SendToTransmission.safariextension/SendToTransmission-0.1alpha2.safariextz>`_. Download it, double-click it, presto!
 
 If you want to install from source, you will need to follow `these instructions from the Apple Developer Connection <http://developer.apple.com/library/safari/#documentation/Tools/Conceptual/SafariExtensionGuide/UsingExtensionBuilder/UsingExtensionBuilder.html#//apple_ref/doc/uid/TP40009977-CH2-SW1>`_.
 
