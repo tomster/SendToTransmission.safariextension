@@ -29,6 +29,22 @@ It's not working!!
 
 This is the first version of my first Safari extension. It's not even beta. It works fine for me™, consider yourself lucky, if it does for you, too :) If not, open a issue here at github and I'll take a look, thanks for caring!
 
+Changes
+=======
+
+0.1alpha2 - 2011-01-03
+**********************
+
+ * Return success message only if torrent has been verified to be actually been added
+ * Improved error handling
+ * Use Safari's update mechanism
+
+
+0.1alpha1 - 2011-01-01
+**********************
+
+ * Initial release
+
 TODO
 ====
 
