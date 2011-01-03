@@ -54,6 +54,8 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>http://tomster.github.com/SendToTransmission.safariextension/manifest.plist</string>
 	<key>Website</key>
 	<string>https://github.com/tomster/SendToTransmission.safariextension</string>
 </dict>
