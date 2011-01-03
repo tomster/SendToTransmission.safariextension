@@ -57,6 +57,6 @@
 	<key>Update Manifest URL</key>
 	<string>http://tomster.github.com/SendToTransmission.safariextension/manifest.plist</string>
 	<key>Website</key>
-	<string>https://github.com/tomster/SendToTransmission.safariextension</string>
+	<string>http://tomster.github.com/SendToTransmission.safariextension/</string>
 </dict>
 </plist>
