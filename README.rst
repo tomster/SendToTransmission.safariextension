@@ -28,3 +28,9 @@ It's not working!!
 ==================
 
 This is the first version of my first Safari extension. It's not even beta. It works fine for me™, consider yourself lucky, if it does for you, too :) If not, open a issue here at github and I'll take a look, thanks for caring!
+
+TODO
+====
+
+- explicit authentication support
+- optional link to take you to the transmission web ui upon successful adding
