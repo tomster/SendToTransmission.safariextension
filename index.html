@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>tomster/SendToTransmission.safariextension @ GitHub</title>
+	
+	<style type="text/css">
+		body {
+  		margin-top: 1.0em;
+  		background-color: #1c70b2;
+		  font-family: "Helvetica,Arial,FreeSans";
+  		color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+		h1 { font-size: 3.8em; color: #e38f4d; margin-bottom: 3px; }
+		h1 .small { font-size: 0.4em; }
+		h1 a { text-decoration: none }
+		h2 { font-size: 1.5em; color: #e38f4d; }
+    h3 { text-align: center; color: #e38f4d; }
+    a { color: #e38f4d; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+		pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+	</style>
+	
+</head>
+
+<body>
+  <a href="http://github.com/tomster/SendToTransmission.safariextension"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/tomster/SendToTransmission.safariextension/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/tomster/SendToTransmission.safariextension/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="http://github.com/tomster/SendToTransmission.safariextension">SendToTransmission.safariextension</a>
+      <span class="small">by <a href="http://github.com/tomster">tomster</a></span></h1>
+
+    <div class="description">
+      A Safari extension to add a torrent via right-click to a (remote) Transmission instance
+    </div>
+
+    <p>SendToTransmission is an extension for the Safari Browser (version 5 and up) that adds a command 'Send to Transmission' to the context menu you get when right-clicking on a URL on web page.
+
+Selecting that command will send the torrent to a (remote, see below) instance of a Transmission bit torrent client (version 2 and up). Transmission will then download the torrent and start it automatically.
+
+Why?
+====
+
+But why go through all this trouble, if I can simply download the torrent with one click and Transmission can automatically start downloading that? Well, the answer is, that this only works, if Transmission is running locally.
+
+Configuration
+=============
+
+If you go to Safari's preferences and there click on the 'Extensions' tab, you should see an entry for 'Send to Transmission'. Clicking on that will allow you to change the URL of the (somewhat non-sensical) localhost default to that of a remote machine.
+
+Authentication
+**************
+
+Authentication (you *did* activate authentication for your remotely reachable Transmission instance, right?!) is currently only supported by the ``http://USERNAME:PASSWORD@hostname.tld:9091`` schema. A future update might add proper support for authentication. Buy me a beer and I'll look into it :)
+</p><h2>Install</h2>
+<p>The easiest way is to `download the latest pre-built package from github <https://github.com/tomster/SendToTransmission.safariextension/archives/master>`_. Download it, double-click it, presto!
+
+If you want to install from source, you will need to follow `these instructions from the Apple Developer Connection <http://developer.apple.com/library/safari/#documentation/Tools/Conceptual/SafariExtensionGuide/UsingExtensionBuilder/UsingExtensionBuilder.html#//apple_ref/doc/uid/TP40009977-CH2-SW1>`_.
+</p>
+<h2>Authors</h2>
+<p>Tom Lazar (tom@tomster.org)<br/><br/>      </p>
+<h2>Contact</h2>
+<p>Tom Lazar (tom@tomster.org)<br/>      </p>
+
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/tomster/SendToTransmission.safariextension/zipball/master">zip</a> or
+      <a href="http://github.com/tomster/SendToTransmission.safariextension/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/tomster/SendToTransmission.safariextension</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="http://github.com/tomster/SendToTransmission.safariextension">tomster/SendToTransmission.safariextension</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
