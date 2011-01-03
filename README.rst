@@ -5,6 +5,11 @@ SendToTransmission is an extension for the Safari Browser (version 5 and up) tha
 Changes
 =======
 
+0.1alpha3 - 2011-01-03
+**********************
+
+ * use async mode for AJAX call
+
 0.1alpha2 - 2011-01-03
 **********************
 

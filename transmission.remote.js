@@ -104,6 +104,6 @@ TransmissionRemote.prototype =
 				filename: url
 			}
 		};
-		this.sendRequest(remote_options, success, false );
+		this.sendRequest(remote_options, success, true );
 	},
 };
