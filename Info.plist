@@ -7,13 +7,13 @@
 	<key>CFBundleDisplayName</key>
 	<string>Send To Transmission</string>
 	<key>CFBundleIdentifier</key>
-	<string>org.tomster.sendtotransmission</string>
+	<string>org.tomster.safariextension.sendtotransmission</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1alpha1</string>
+	<string>0.1alpha2</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>6</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Context Menu Items</key>
