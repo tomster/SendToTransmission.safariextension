@@ -66,6 +66,7 @@ TransmissionRemote.prototype =
 					: "";
 		if( !remote._error.length )
 			remote._error = 'Server not responding';
+		alert(remote._error);
 
 	},
 
