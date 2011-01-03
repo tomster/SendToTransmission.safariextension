@@ -94,7 +94,7 @@ TransmissionRemote.prototype =
 		jQuery.ajax( ajaxSettings );
 	},
 
-	addTorrentByUrl: function( url, options ) {
+	addTorrentByUrl: function( url, options, success ) {
 		var remote = this;
 		var remote_options = {
 			method: 'torrent-add',
@@ -103,8 +103,6 @@ TransmissionRemote.prototype =
 				filename: url
 			}
 		};
-		this.sendRequest(remote_options, function() {
-		    alert('Sent ' + url + ' to ' + remote._transmission_url);
-		});
+		this.sendRequest(remote_options, success, false );
 	},
 };

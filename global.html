@@ -19,7 +19,16 @@ function handleCommand(event)
     transmission_url = safari.extension.settings.transmission_url
     torrent_url = event.userInfo.target_url
     remote = new TransmissionRemote(transmission_url)
-    remote.addTorrentByUrl(torrent_url, {paused: false})
+    remote.addTorrentByUrl(torrent_url, {paused: false},
+        function (data, textStatus, XMLHttpRequest) {
+            if (textStatus == 'success') {
+              torrent_name = data.arguments['torrent-added'].name
+              alert("Successfully added '" + torrent_name + "' to " + transmission_url)
+            }
+            else{
+              alert("Couldn't add torrent (error returned was '" + remote._error + "')");
+            };
+    })
 }
 
 function validateCommand(event)
