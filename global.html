@@ -22,8 +22,12 @@ function handleCommand(event)
     remote.addTorrentByUrl(torrent_url, {paused: false},
         function (data, textStatus, XMLHttpRequest) {
             if (textStatus == 'success') {
-              torrent_name = data.arguments['torrent-added'].name
-              alert("Successfully added '" + torrent_name + "' to " + transmission_url)
+              if (data.arguments['torrent-added'] == undefined) {
+                alert("Hm, apparently " + torrent_url + " is not a torrent file.");
+              } else {
+                torrent_name = data.arguments['torrent-added'].name
+                alert("Successfully added '" + torrent_name + "' to " + transmission_url)
+              }
             }
             else{
               alert("Couldn't add torrent (error returned was '" + remote._error + "')");
