@@ -1,3 +1,19 @@
+body {
+    font-size: 86%;
+}
+
+body div.container {
+    margin-top: 3em;
+}
+
+body div.container h1 {
+    margin-bottom: 1em;
+}
+
+body div.container h1 a {
+    text-decoration: none;
+}
+
 pre { background: #000; color: #fff; padding: 15px;}
 .footer { text-align:center; padding-top:30px; font-style: italic; }
 
@@ -5,4 +21,10 @@ p + p {
     margin-top: -.5em;
     text-indent: 0em;
 
+}
+
+.description {
+    background-color: #E7E7E7;
+    padding: 1em;
+    font-size: 120%;
 }
